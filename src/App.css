@@ -1,10 +1,13 @@
-
-
 .App{
   width:1280px;
   height:800px;
   background-image: url('images/liberty.png');
   font-family: 'Nunito Sans', sans-serif;
+  PADDING-RIGHT: 0px;
+	PADDING-LEFT: 0px;
+	PADDING-BOTTOM: 0px;
+	PADDING-TOP: 0px;
+	MARGIN: 0px;
 }
 
 .container{
@@ -12,13 +15,10 @@
 }
 
 .selectLanguage{
-  top: 51px;
-  margin-top: 10px;
-  padding-top: 5px;
-  
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .selectLanguage h1{
-
 text-align: center;
 letter-spacing: 0;
 color: #007F8E;
@@ -31,25 +31,7 @@ font-size: 70px;
   width: 490px;
 }
 
-button{
-  
-
-}
-/* .App-logo {
-  height: 40vmin;
+.welcome-screen{
+  background-image: url('images/home-background.png');
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #09d3ac;
-} */

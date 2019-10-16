@@ -4,6 +4,7 @@ import englishButton from './images/english-button.png'
 import spanishButton from './images/spanish.png'
 import chineseButton from './images/chinese.png'
 import russianButton from './images/russian.png'
+import Welcome from './welcome-screen'
 
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
             <h1>Please select your language</h1>
         </div>
         <div className="buttonEnglish">
-            <img className="buttons" src ={englishButton} alt={"englishButton"}/>
+           <a href={Welcome}> <img className="buttons" src ={englishButton} alt={"englishButton"}/></a>
         </div>
         <div className="buttonEnglish">
             <img className="buttons" src ={chineseButton} alt={"chineseButton"}/>
