@@ -1,14 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import { Route, BrowserRouter as Router } from 'react-router-dom'
+import Contact from './Contact'
+import App from './App'
+import WelcomeScreen from '../src/components/WelcomeScreen'
 
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const routing = (
+    <Router>
+      <div>
+        <Route exact path="/" component={App} />
+        <Route path="/contact" component={Contact} />
+        <Route path="/WelcomeScreen" component={WelcomeScreen} />
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
+      </div>
+    </Router>
+  )
 
-//  // "homepage": "file:///Users/tslocal/Documents/caseStudy/react/airbnb/build/"
+ReactDOM.render(routing, document.getElementById('root'));
+
 

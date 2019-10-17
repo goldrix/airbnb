@@ -1,9 +1,12 @@
 import React from 'react';
 import '../App.css';
+import {Link} from "react-router-dom";
 import englishButton from '../images/english-button.png'
 import spanishButton from '../images/spanish.png'
 import chineseButton from '../images/chinese.png'
 import russianButton from '../images/russian.png'
+
+
 
 
 function Home() {
@@ -14,7 +17,7 @@ function Home() {
             <h1>Please select your language</h1>
         </div>
         <div className="buttonEnglish">
-           <a href='/WelcomeScreen'> <img className="buttons" src ={englishButton} alt={"englishButton"}/></a>
+          <Link to="/WelcomeScreen"><img className="buttons" src ={englishButton} alt={"englishButton"}/></Link> 
         </div>
         <div className="buttonEnglish">
             <img className="buttons" src ={chineseButton} alt={"chineseButton"}/>
