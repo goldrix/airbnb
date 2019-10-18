@@ -1,13 +1,15 @@
-.App{
-  width:1280px;
-  height:800px;
-  background-image: url('images/liberty.png');
+body{
+  
   font-family: 'Nunito Sans', sans-serif;
   PADDING-RIGHT: 0px;
-	PADDING-LEFT: 0px;
-	PADDING-BOTTOM: 0px;
-	PADDING-TOP: 0px;
-	MARGIN: 0px;
+  PADDING-LEFT: 0px;
+  PADDING-BOTTOM: 0px;
+  PADDING-TOP: 0px;
+  MARGIN: 0px;
+
+}
+.App{
+  background-image: url('images/liberty.png');
 }
 
 .container{
@@ -31,7 +33,29 @@ font-size: 70px;
   width: 490px;
 }
 
-.welcome-screen{
-  background-image: url('images/home-background.png');
+.welcomeScreenBackground{
+background-image: url('images/home-background.png');
+width:1280px;
+height:800px;
 }
 
+.welcomeItems{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-top: 70px;
+  
+}
+
+.welcomeItems img{
+  padding: 5px 0px 5px 0px;
+}
+.selectLanguageButton{
+  text-align: center;
+  padding-top: 86px;
+}
+
+.title{
+  margin: 0;
+  
+}

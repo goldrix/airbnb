@@ -1,21 +1,36 @@
 import React from 'react';
-// import '../App.css';
+import '../App.css';
+import {Link} from "react-router-dom";
+
+import DuringYourStayButton from '../images/during-your-stay-button.png'
+import FaqButton from '../images/faq-button.png'
+import TransportationButton from '../images/transportation.png'
+import LocalAttractionsButton from '../images/local-attractions-button.png'
+import localEatsButton from '../images/local-eats-button.png'
+import localEssentialsButton from '../images/local-essentials.png'
+import selectLanguageButton from '../images/select-language-button.png'
+
 
 
 function WelcomeScreen() {
   return (
-    <div>
+    <div className="welcomeScreenBackground">
       <div>
-        <h1>Welcome!!!!</h1>
-        <ul>
-          <li><a href="/home">Select Language</a></li>
-          <li><a href="/duringYouStay">During you Stay</a></li>
-          <li><a href="/faq">FAQ</a></li>
-          <li><a href="/transportation">Transportation</a></li>
-          <li><a href="/localAttractions">Local Attractions</a></li>
-          <li><a href="/localEats">Local eats</a></li>
-          <li><a href="/localEssentials">Local Essentials</a></li>
-        </ul>
+        <div className="welcomeItems">
+          <Link to="/DuringYourStay"><img src={DuringYourStayButton} alt={"DuringYourStayButton"}></img></Link>
+          <Link to="/Faq"><img src={FaqButton} alt={"FaqButton"}></img></Link>
+          <Link to="/Transportation"><img src={TransportationButton} alt={"TransportationButton"}></img></Link>
+          <Link to="/LocalAttractions"><img src={LocalAttractionsButton} alt={"LocalAttractionsButton"}></img></Link>
+          <Link to="/localEats"><img src={localEatsButton} alt={"localEatsButton"}></img></Link>
+          <Link to="/localEssentials"><img src={localEssentialsButton} alt={"localEssentialsButton"}></img></Link>
+        </div>
+  
+        <div className="selectLanguageButton">
+          <Link to="/"><img src={selectLanguageButton} alt={"selectLanguageButton"}></img></Link>
+        </div>
+        
+        
+        
 
       </div>
     </div>
