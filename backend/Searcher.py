@@ -15,7 +15,7 @@ class Searcher:
 
     def search(self, type_, isOpen):
         if (type_ == "local_attractions"):
-            type_arry = ['parks', 'museum', 'aquarium', 'amusement_park', 'art_gallery', 'movie_theater', 'zoo', 'casino']
+            type_arry = ['museum', 'aquarium', 'amusement_park', 'art_gallery', 'movie_theater', 'zoo', 'casino']
             self.json_maker(self.dic_maker_special(type_arry), self.json_name)
         elif (type_ == "local_essentials", self.json_name):
             type_arry = ['laundry', 'pharmacy', 'police', 'hospital',  'bank']
@@ -44,10 +44,11 @@ class Searcher:
             master_dict[i] = {}
             master_dict[i]['name'] = element['name']
             master_dict[i]['address'] = element['vicinity']
+            master_dict[i]['type'] = 'resturant' #hardcoded
             i += 1
         return master_dict
 
-    def dic_maker_special(self, type_arry):
+    def dic_maker_special(self, type_arry): 
         master_dict = {}
         i = 0
         for sub_type in type_arry:
@@ -57,6 +58,7 @@ class Searcher:
                     master_dict[i] = {}
                     master_dict[i]['name'] = element['name']
                     master_dict[i]['address'] = element['vicinity']
+                    master_dict[i]['type'] = sub_type
                     #master_dict[i]['distance'] = foo(self.current_location, element['vicininty'], distance_or_time)
                     i += 1
         return master_dict
