@@ -33,7 +33,7 @@ def time_n_distance(origin,end,output): #calls on distance matrix, pulls relevan
     elif output == "time": 
         return time_ 
     else: 
-        print("invalid input")
+        print(" ")
 
 
 
