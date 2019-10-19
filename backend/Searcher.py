@@ -16,7 +16,7 @@ class Searcher:
 
     def arr_maker(self, places_result):
         master_array = [[],[],[],[]]
-        '''#1 sub array is name '''
+        '''Instead of array  make into dict and then a json file via json.dump'''
         for element in places_result['results']:
             master_array[0].append(element['name'])
             master_array[1].append(element['vicinity'])
