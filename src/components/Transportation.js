@@ -23,7 +23,7 @@ function Transportation() {
             <div className="videoContainer">
               <p className="videoContainerTitle">Watch Videos</p>
               <Link to="/HowToGetToTheTrain"><img className="videoPreview" src ={HowToBuyMetroCard} alt={"HowToBuyMetroCard"}/></Link>
-              <img className="videoPreview" src ={HowToGetToTheTrain} alt={"HowToGetToTheTrain"}/>
+              <Link to="/HowToGetToTheTrain"><img className="videoPreview" src ={HowToGetToTheTrain} alt={"HowToGetToTheTrain"}/></Link>
             </div>
             <div className="selectLanguageButtonTratsportation">
               <Link to="/"><img src={selectLanguageButton} alt={"selectLanguageButton"}></img></Link>

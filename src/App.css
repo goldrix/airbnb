@@ -11,6 +11,8 @@ body{
 }
 .App{
   background-image: url('images/liberty.png');
+  width:1280px;
+  height:800px;
 }
 
 .container{
@@ -151,4 +153,8 @@ height:800px;
 .playerContainer{
   padding-top: 37px;
   height: 800px; 
+}
+
+iframe {
+  /* pointer-events: none; */
 }

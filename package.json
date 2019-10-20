@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "netlify-cli": "^2.19.0",
     "peer": "^0.2.10",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
