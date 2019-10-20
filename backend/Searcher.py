@@ -17,7 +17,7 @@ class Searcher:
         if (type_ == "local_attractions"):
             type_arry = ['museum', 'aquarium', 'amusement_park', 'art_gallery', 'movie_theater', 'zoo', 'casino']
             self.json_maker(self.dic_maker_special(type_arry), self.json_name)
-        elif (type_ == "local_essentials", self.json_name):
+        elif (type_ == "local_essentials"):
             type_arry = ['laundry', 'pharmacy', 'police', 'hospital',  'bank']
             self.json_maker(self.dic_maker_special(type_arry), self.json_name)
         else :
@@ -45,6 +45,8 @@ class Searcher:
             master_dict[i]['name'] = element['name']
             master_dict[i]['address'] = element['vicinity']
             master_dict[i]['type'] = 'resturant' #hardcoded
+            master_dict[i]['distance'] = geocode_funcs.time_n_distance(self.current_location, element['vicinity'], 'distance')
+            #master_dict[i]['time'] = geocode_funcs.time_n_distance(self.current_location, element['vicinity'], 'time')
             i += 1
         return master_dict
 
@@ -59,7 +61,8 @@ class Searcher:
                     master_dict[i]['name'] = element['name']
                     master_dict[i]['address'] = element['vicinity']
                     master_dict[i]['type'] = sub_type
-                    #master_dict[i]['distance'] = foo(self.current_location, element['vicininty'], distance_or_time)
+                    master_dict[i]['distance'] = geocode_funcs.time_n_distance(self.current_location, element['vicinity'], 'distance')
+                    #master_dict[i]['time'] = geocode_funcs.time_n_distance(self.current_location, element['vicinity'], 'time')
                     i += 1
         return master_dict
 
